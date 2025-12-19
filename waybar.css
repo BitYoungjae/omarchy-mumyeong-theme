@@ -1,0 +1,548 @@
+/* Mumyeong Theme for Waybar */
+
+/* ========================================
+   Color Palette
+   ======================================== */
+
+/* Carbon Layers (Dark Backgrounds) */
+@define-color oma0 #101012;
+@define-color oma1 #18181B;
+@define-color oma2 #27272A;
+@define-color oma3 #52525B;
+
+/* Frost Mist (Light Foregrounds) */
+@define-color oma4 #D4D4D8;
+@define-color oma5 #E4E4E7;
+@define-color oma6 #FAFAFA;
+
+/* Phantom Accents (Primary Highlights) */
+@define-color oma7 #A1A1AA;
+@define-color oma8 #E2E8F0;
+@define-color oma9 #94A3B8;
+@define-color oma10 #CBD5E1;
+
+/* Muted Semantic (Semantic Colors) */
+@define-color oma11 #E08A8A;
+@define-color oma12 #D9A67E;
+@define-color oma13 #D4C88C;
+@define-color oma14 #8ABFA3;
+@define-color oma15 #C4A6CF;
+
+/* Applied Colors */
+@define-color background @oma0;
+@define-color foreground @oma5;
+@define-color highlight @oma8;
+@define-color warning @oma13;
+@define-color critical @oma11;
+@define-color success @oma9;
+
+/* ========================================
+   Global Styles
+   ======================================== */
+
+* {
+  font-family: "JetBrains Mono", "Font Awesome 6 Free", monospace;
+  font-size: 13px;
+  min-height: 0;
+}
+
+window#waybar {
+  background-color: transparent;
+  color: @oma5;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+tooltip {
+  background-color: alpha(@oma0, 0.95);
+  border: 1px solid @oma3;
+  border-radius: 10px;
+  color: @oma5;
+}
+
+tooltip label {
+  color: @oma5;
+}
+
+/* ========================================
+   Module Containers
+   ======================================== */
+
+.modules-left,
+.modules-center,
+.modules-right {
+  background-color: alpha(@oma2, 0.75);
+  padding: 2px 14px 2px 8px;
+  border-radius: 14px;
+}
+
+/* ========================================
+   Common Module Styles
+   ======================================== */
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#bluetooth,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#power-profiles-daemon,
+#mpd,
+#mpris,
+#language,
+#keyboard-state,
+#custom-power,
+#custom-launcher,
+#custom-notification,
+#custom-screenrecording-indicator,
+#custom-omarchy,
+#custom-expand-icon,
+#custom-update,
+#window,
+#privacy,
+#privacy-item {
+  border-radius: 10px;
+  background-color: transparent;
+  color: @oma5;
+  transition-property: background-color, color, opacity;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
+}
+
+/* Hover effect for all modules */
+#clock:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#temperature:hover,
+#backlight:hover,
+#network:hover,
+#pulseaudio:hover,
+#wireplumber:hover,
+#bluetooth:hover,
+#custom-media:hover,
+#idle_inhibitor:hover,
+#power-profiles-daemon:hover,
+#language:hover,
+#keyboard-state:hover,
+#custom-power:hover,
+#custom-launcher:hover,
+#custom-notification:hover,
+#custom-omarchy:hover,
+#custom-expand-icon:hover,
+#custom-update:hover {
+  background-color: alpha(@oma2, 0.9);
+  color: @oma6;
+}
+
+/* ========================================
+   Workspaces
+   ======================================== */
+
+#workspaces {
+}
+
+#workspaces button {
+  background-color: transparent;
+  color: @oma3;
+  border-radius: 10px;
+  border: none;
+  transition-property: background-color, color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
+}
+
+#workspaces button:hover {
+  background-color: alpha(@oma2, 0.9);
+  color: @oma5;
+}
+
+#workspaces button.active {
+  background-color: alpha(@oma8, 0.35);
+  border-radius: 50%;
+  padding: 3px 9px 2px 5px;
+  color: @oma8;
+}
+
+#workspaces button.active:hover {
+  background-color: alpha(@oma8, 0.5);
+  color: @oma6;
+}
+
+#workspaces button.urgent {
+  background-color: alpha(@oma11, 0.35);
+  color: @oma11;
+}
+
+#workspaces button.urgent:hover {
+  background-color: alpha(@oma11, 0.5);
+}
+
+#workspaces button.empty {
+  color: @oma3;
+  opacity: 0.6;
+}
+
+#workspaces button.empty:hover {
+  opacity: 1;
+}
+
+#workspaces button.visible {
+  color: @oma5;
+}
+
+/* ========================================
+   Clock
+   ======================================== */
+
+#clock {
+  font-weight: bold;
+  color: @oma8;
+}
+
+/* ========================================
+   Battery
+   ======================================== */
+
+#battery {
+  color: @oma14;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: @oma14;
+}
+
+#battery.warning:not(.charging) {
+  color: @oma13;
+}
+
+#battery.critical:not(.charging) {
+  background-color: alpha(@oma11, 0.3);
+  color: @oma11;
+  animation: blink 0.5s steps(12) infinite alternate;
+}
+
+/* ========================================
+   CPU & Memory & Disk
+   ======================================== */
+
+#cpu {
+  color: @oma9;
+}
+
+#memory {
+  color: @oma7;
+}
+
+#disk {
+  color: @oma10;
+}
+
+/* ========================================
+   Temperature
+   ======================================== */
+
+#temperature {
+  color: @oma9;
+}
+
+#temperature.critical {
+  background-color: alpha(@oma11, 0.3);
+  color: @oma11;
+}
+
+/* ========================================
+   Network
+   ======================================== */
+
+#network {
+  color: @oma9;
+}
+
+#network.disconnected {
+  color: @oma3;
+}
+
+#network.linked {
+  color: @oma13;
+}
+
+#network.wifi {
+  color: @oma9;
+}
+
+#network.ethernet {
+  color: @oma14;
+}
+
+/* ========================================
+   Bluetooth
+   ======================================== */
+
+#bluetooth {
+  color: @oma10;
+}
+
+#bluetooth.disabled {
+  color: @oma3;
+}
+
+#bluetooth.connected {
+  color: @oma9;
+}
+
+/* ========================================
+   Audio (PulseAudio / WirePlumber)
+   ======================================== */
+
+#pulseaudio,
+#wireplumber {
+  color: @oma12;
+}
+
+#pulseaudio.muted,
+#wireplumber.muted {
+  color: @oma3;
+}
+
+/* ========================================
+   Backlight
+   ======================================== */
+
+#backlight {
+  color: @oma13;
+}
+
+/* ========================================
+   System Tray
+   ======================================== */
+
+#tray {
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+  opacity: 0.6;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  color: @oma12;
+}
+
+#tray menu {
+  background-color: alpha(@oma0, 0.95);
+  border: 1px solid @oma3;
+  border-radius: 10px;
+  color: @oma5;
+}
+
+#tray menu menuitem {
+  border-radius: 6px;
+  transition-property: background-color;
+  transition-duration: 0.1s;
+}
+
+#tray menu menuitem:hover {
+  background-color: alpha(@oma2, 0.9);
+}
+
+/* ========================================
+   Idle Inhibitor
+   ======================================== */
+
+#idle_inhibitor {
+  color: @oma3;
+}
+
+#idle_inhibitor.activated {
+  color: @oma14;
+}
+
+/* ========================================
+   MPRIS (Media Player)
+   ======================================== */
+
+#mpris {
+  background-color: alpha(@oma2, 0.5);
+}
+
+#mpris:hover {
+  background-color: alpha(@oma3, 0.7);
+}
+
+#mpris.playing {
+  color: @oma14;
+}
+
+#mpris.playing:hover {
+  background-color: alpha(@oma14, 0.2);
+}
+
+#mpris.paused {
+  color: @oma7;
+  opacity: 0.85;
+}
+
+#mpris.paused:hover {
+  opacity: 1;
+  background-color: alpha(@oma7, 0.2);
+}
+
+#mpris.stopped {
+  color: @oma3;
+}
+
+#mpris.spotify {
+  color: @oma14;
+}
+
+#mpris.firefox {
+  color: @oma12;
+}
+
+#mpris.chromium,
+#mpris.chrome {
+  color: @oma9;
+}
+
+/* ========================================
+   Privacy & Screen Recording
+   ======================================== */
+
+#privacy {
+}
+
+#privacy-item {
+  color: @oma12;
+}
+
+#privacy-item.screenshare {
+  color: @oma14;
+}
+
+#privacy-item.audio-in {
+  color: @oma11;
+}
+
+#privacy-item.audio-out {
+  color: @oma9;
+}
+
+#custom-screenrecording-indicator {
+  color: @oma3;
+}
+
+#custom-screenrecording-indicator.active {
+  background-color: alpha(@oma11, 0.3);
+  color: @oma11;
+  padding: 0.5px 6.5px 1px 4px;
+  animation: blink 1s steps(12) infinite alternate;
+}
+
+/* ========================================
+   Power Menu & Launcher
+   ======================================== */
+
+#custom-power {
+  color: @oma11;
+}
+
+#custom-power:hover {
+  background-color: alpha(@oma11, 0.25);
+  color: @oma6;
+}
+
+#custom-launcher {
+  color: @oma8;
+}
+
+#custom-launcher:hover {
+  background-color: alpha(@oma8, 0.25);
+  color: @oma6;
+}
+
+#custom-omarchy {
+  color: @oma8;
+}
+
+#custom-omarchy:hover {
+  background-color: alpha(@oma8, 0.25);
+  color: @oma6;
+}
+
+/* ========================================
+   Notifications
+   ======================================== */
+
+#custom-notification {
+  color: @oma9;
+}
+
+#custom-notification.dnd-enabled {
+  color: @oma3;
+}
+
+#custom-notification.dnd-none {
+  color: @oma9;
+}
+
+/* ========================================
+   Power Profiles
+   ======================================== */
+
+#power-profiles-daemon {
+  color: @oma14;
+}
+
+#power-profiles-daemon.performance {
+  color: @oma11;
+}
+
+#power-profiles-daemon.balanced {
+  color: @oma14;
+}
+
+#power-profiles-daemon.power-saver {
+  color: @oma9;
+}
+
+/* ========================================
+   Language & Keyboard
+   ======================================== */
+
+#language {
+  color: @oma7;
+}
+
+#keyboard-state {
+  color: @oma7;
+}
+
+#keyboard-state > label.locked {
+  color: @oma13;
+}
+
+/* ========================================
+   Animations
+   ======================================== */
+
+@keyframes blink {
+  to {
+    background-color: alpha(@oma11, 0.5);
+    color: @oma6;
+  }
+}
