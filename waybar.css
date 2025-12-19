@@ -1,23 +1,23 @@
-/* Mumyeong Theme for Waybar */
+/* Mumyeong Theme for Waybar (v2.0) */
 
 /* ========================================
    Color Palette
    ======================================== */
 
 /* Carbon Layers (Dark Backgrounds) */
-@define-color oma0 #101012;
+@define-color oma0 #09090B;
 @define-color oma1 #18181B;
 @define-color oma2 #27272A;
-@define-color oma3 #52525B;
+@define-color oma3 #71717A;
 
 /* Frost Mist (Light Foregrounds) */
-@define-color oma4 #D4D4D8;
+@define-color oma4 #A1A1AA;
 @define-color oma5 #E4E4E7;
-@define-color oma6 #FAFAFA;
+@define-color oma6 #FFFFFF;
 
 /* Phantom Accents (Primary Highlights) */
-@define-color oma7 #A1A1AA;
-@define-color oma8 #E2E8F0;
+@define-color oma7 #52525B;
+@define-color oma8 #F4F4F5;
 @define-color oma9 #94A3B8;
 @define-color oma10 #CBD5E1;
 
@@ -25,7 +25,7 @@
 @define-color oma11 #E08A8A;
 @define-color oma12 #D9A67E;
 @define-color oma13 #D4C88C;
-@define-color oma14 #8ABFA3;
+@define-color oma14 #81C784;
 @define-color oma15 #C4A6CF;
 
 /* Applied Colors */

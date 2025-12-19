@@ -1,28 +1,37 @@
-@define-color selected-text #101012;
-@define-color text #D4D4D8;
-@define-color base #101012;
-@define-color border #52525B;
-@define-color foreground #D4D4D8;
-@define-color background #101012;
-@define-color hover #E2E8F0;
-@define-color selected-box #E2E8F0;
+/* Mumyeong Theme for Walker (v2.0) */
+/* CRITICAL FIX: Glow/Outline 방식으로 가독성 개선 */
+
+@define-color selected-text #FFFFFF;
+@define-color text #A1A1AA;
+@define-color base #09090B;
+@define-color border #71717A;
+@define-color foreground #A1A1AA;
+@define-color background #09090B;
+@define-color hover #27272A;
+@define-color selected-box #27272A;
+@define-color selected-border #F4F4F5;
 
 /* Additional styles */
 .box-wrapper {
   border-radius: 12px;
   box-shadow:
-    0 0 20px rgba(82, 82, 91, 0.25),
-    0 8px 32px rgba(16, 16, 18, 0.5);
+    0 0 20px rgba(113, 113, 122, 0.25),
+    0 8px 32px rgba(9, 9, 11, 0.5);
 }
 
 child:selected .item-box {
-  background: alpha(@selected-box, 0.2);
+  background: alpha(@selected-box, 0.8);
+  border: 1px solid @selected-border;
   margin-left: 10px;
   transition: all 0.15s ease-in;
 }
 
+child:selected .item-box label {
+  color: @selected-text;
+}
+
 child:hover .item-box {
-  background: alpha(@hover, 0.15);
+  background: alpha(@hover, 0.5);
 }
 
 window .search-container {
