@@ -1,0 +1,30 @@
+# Mumyeong Theme - colors.toml
+# "Neutral Void (무채색의 공허)" v2.0
+
+# Core UI (6 variables)
+accent = "#F4F4F5"               # oma8 - Ghost Silver (primary accent)
+cursor = "#F4F4F5"               # oma8 - Ghost Silver
+foreground = "#E4E4E7"           # oma5 - Platinum (primary text)
+background = "#09090B"           # oma0 - Void (deep black)
+selection_foreground = "#FFFFFF" # oma6 - Snow (selected text)
+selection_background = "#27272A" # oma2 - Charcoal (selection bg)
+
+# ANSI Normal (8 variables)
+color0 = "#09090B" # Black - oma0 (Void)
+color1 = "#E08A8A" # Red - oma11 (Muted Rose - errors)
+color2 = "#81C784" # Green - oma14 (Pale Emerald - success)
+color3 = "#D4C88C" # Yellow - oma13 (Brass - warnings)
+color4 = "#CBD5E1" # Blue - oma10 (Frost Linen)
+color5 = "#F4F4F5" # Magenta - oma8 (Ghost Silver - accent)
+color6 = "#94A3B8" # Cyan - oma9 (Slate Blue)
+color7 = "#A1A1AA" # White - oma4 (Mist Gray - body text)
+
+# ANSI Bright (8 variables)
+color8 = "#71717A"  # Bright Black - oma3 (Zinc - muted/disabled)
+color9 = "#E08A8A"  # Bright Red - oma11
+color10 = "#81C784" # Bright Green - oma14
+color11 = "#D4C88C" # Bright Yellow - oma13
+color12 = "#94A3B8" # Bright Blue - oma9 (Slate Blue)
+color13 = "#C4A6CF" # Bright Magenta - oma15 (Thistle)
+color14 = "#94A3B8" # Bright Cyan - oma9
+color15 = "#FFFFFF" # Bright White - oma6 (Snow)
