@@ -29,7 +29,7 @@
 @define-color oma15 #C4A6CF;
 
 /* Applied Colors */
-@define-color background @oma0;
+@define-color background transparent;
 @define-color foreground @oma5;
 @define-color highlight @oma8;
 @define-color warning @oma13;
