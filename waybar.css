@@ -141,7 +141,7 @@ tooltip label {
 #workspaces button.active {
   background-color: alpha(@oma8, 0.35);
   border-radius: 50%;
-  padding: 2px 7px;
+  padding: 0 8px;
   color: @oma8;
 }
 
