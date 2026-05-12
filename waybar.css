@@ -74,7 +74,7 @@ tooltip label {
 .modules-center,
 .modules-right {
   background-color: alpha(@oma2, 0.75);
-  padding: 2px 14px 2px 8px;
+  padding: 2px 14px;
   border-radius: 14px;
 }
 
@@ -125,7 +125,7 @@ tooltip label {
 
 #workspaces button {
   background-color: transparent;
-  color: @oma3;
+  color: @oma4;
   border-radius: 10px;
   border: none;
   transition-property: background-color, color;
@@ -141,7 +141,7 @@ tooltip label {
 #workspaces button.active {
   background-color: alpha(@oma8, 0.35);
   border-radius: 50%;
-  padding: 3px 9px 2px 5px;
+  padding: 2px 7px;
   color: @oma8;
 }
 
@@ -160,7 +160,7 @@ tooltip label {
 }
 
 #workspaces button.empty {
-  color: @oma3;
+  color: @oma4;
   opacity: 0.6;
 }
 
@@ -186,7 +186,7 @@ tooltip label {
    ======================================== */
 
 #battery {
-  color: @oma14;
+  color: @oma5;
 }
 
 #battery.charging,
@@ -209,15 +209,15 @@ tooltip label {
    ======================================== */
 
 #cpu {
-  color: @oma9;
+  color: @oma5;
 }
 
 #memory {
-  color: @oma7;
+  color: @oma5;
 }
 
 #disk {
-  color: @oma10;
+  color: @oma5;
 }
 
 /* ========================================
@@ -225,7 +225,7 @@ tooltip label {
    ======================================== */
 
 #temperature {
-  color: @oma9;
+  color: @oma5;
 }
 
 #temperature.critical {
@@ -238,11 +238,11 @@ tooltip label {
    ======================================== */
 
 #network {
-  color: @oma9;
+  color: @oma5;
 }
 
 #network.disconnected {
-  color: @oma3;
+  color: @oma4;
 }
 
 #network.linked {
@@ -250,11 +250,11 @@ tooltip label {
 }
 
 #network.wifi {
-  color: @oma9;
+  color: @oma5;
 }
 
 #network.ethernet {
-  color: @oma14;
+  color: @oma5;
 }
 
 /* ========================================
@@ -262,15 +262,15 @@ tooltip label {
    ======================================== */
 
 #bluetooth {
-  color: @oma10;
+  color: @oma5;
 }
 
 #bluetooth.disabled {
-  color: @oma3;
+  color: @oma4;
 }
 
 #bluetooth.connected {
-  color: @oma9;
+  color: @oma5;
 }
 
 /* ========================================
@@ -279,12 +279,12 @@ tooltip label {
 
 #pulseaudio,
 #wireplumber {
-  color: @oma12;
+  color: @oma5;
 }
 
 #pulseaudio.muted,
 #wireplumber.muted {
-  color: @oma3;
+  color: @oma4;
 }
 
 /* ========================================
@@ -292,7 +292,7 @@ tooltip label {
    ======================================== */
 
 #backlight {
-  color: @oma13;
+  color: @oma5;
 }
 
 /* ========================================
@@ -334,7 +334,7 @@ tooltip label {
    ======================================== */
 
 #idle_inhibitor {
-  color: @oma3;
+  color: @oma4;
 }
 
 #idle_inhibitor.activated {
@@ -372,7 +372,7 @@ tooltip label {
 }
 
 #mpris.stopped {
-  color: @oma3;
+  color: @oma4;
 }
 
 #mpris.spotify {
@@ -412,7 +412,7 @@ tooltip label {
 }
 
 #custom-screenrecording-indicator {
-  color: @oma3;
+  color: @oma4;
 }
 
 #custom-screenrecording-indicator.active {
@@ -458,15 +458,15 @@ tooltip label {
    ======================================== */
 
 #custom-notification {
-  color: @oma9;
+  color: @oma5;
 }
 
 #custom-notification.dnd-enabled {
-  color: @oma3;
+  color: @oma4;
 }
 
 #custom-notification.dnd-none {
-  color: @oma9;
+  color: @oma5;
 }
 
 /* ========================================
@@ -494,11 +494,11 @@ tooltip label {
    ======================================== */
 
 #language {
-  color: @oma7;
+  color: @oma5;
 }
 
 #keyboard-state {
-  color: @oma7;
+  color: @oma5;
 }
 
 #keyboard-state > label.locked {
