@@ -115,13 +115,15 @@
 
 ### Ghostty (Terminal)
 
-| 역할                 | 값                                           |
-| -------------------- | -------------------------------------------- |
-| Background           | `#09090B` (oma0) - _Deep Void_               |
-| Foreground           | `#D4D4D8` (oma4 조정됨)                      |
-| Selection BG         | `#27272A` (oma2)                             |
-| Cursor               | `#F4F4F5` (oma8)                             |
-| Palette 0-7 (Normal) | `oma0`, `oma11`~`oma14`, `oma9`, `oma4` 매핑 |
+| 역할                 | 값                                                           |
+| -------------------- | ------------------------------------------------------------ |
+| Background           | `#18181B` (oma1) - 월페이퍼 위로 살짝 떠보이는 lifted base (oma2 는 selection_background 와 충돌하므로 회피) |
+| Foreground           | `#E4E4E7` (oma5)                                             |
+| Selection BG         | `#71717A` (oma3) - lifted base 위에서도 선택 가시화          |
+| Selection FG         | `#FFFFFF` (oma6)                                             |
+| Cursor               | `#F4F4F5` (oma8)                                             |
+| Palette 0-7 (Normal) | `oma0, oma11, oma14, oma13, oma10, oma8, oma9, oma4` 매핑   |
+| Palette 8-15 (Bright)| `oma3, oma11, oma14, oma13, oma9, oma15, oma9, oma6` 매핑   |
 
 ---
 

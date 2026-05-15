@@ -13,7 +13,7 @@ This repository is a theme bundle for Omarchy. It follows the latest Omarchy the
 ### Override files (template would otherwise auto-generate)
 - `hyprland.conf` + `hyprland.lua`: Hyprland compositor border colors (active = Ghost Silver `#F4F4F5`, inactive = Glass Edge `#71717A`). Both files mirror the same settings; Omarchy ≤ 3.8 sources the `.conf`, the upcoming `.lua` loader will pick the `.lua`. Drop the `.conf` once the `.lua` loader ships.
 - `hyprlock.conf`: Lock screen RGBA color variables.
-- `ghostty.conf`: Terminal colors only — background is lifted to `#0F0F11` (between `oma0` and `oma1`) so the terminal floats slightly above the wallpaper. Font/window/keybind preferences stay in `~/.config/ghostty/config`; Ghostty's cascade merges them.
+- `ghostty.conf`: Terminal colors only — background is lifted to `#18181B` (oma1, Onyx) so the terminal floats slightly above the wallpaper. oma2 is intentionally avoided here because it's the canonical `selection_background` across the palette; reusing it as ghostty's base would make gum/helix/etc. selection highlights invisible inside ghostty. `selection-background = #71717A` (oma3) stays visible against the lifted base. Font/window/keybind preferences stay in `~/.config/ghostty/config`; Ghostty's cascade merges them.
 - `mako.ini`: Notification colors only; layout (radius, padding, icons) is inherited from `~/.local/share/omarchy/default/mako/core.ini` and the toggleable `~/.local/state/omarchy/toggles/mako.ini`.
 - `waybar.css`, `walker.css`, `swayosd.css`: Heavier UI overrides for the glassmorphism aesthetic (full `oma0`–`oma15` palette + custom shadow/blur/border rules).
 
