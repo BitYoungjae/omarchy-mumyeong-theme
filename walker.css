@@ -15,8 +15,8 @@
 .box-wrapper {
   border-radius: 12px;
   box-shadow:
-    0 0 20px rgba(113, 113, 122, 0.25),
-    0 8px 32px rgba(9, 9, 11, 0.5);
+    0 0 20px alpha(@border, 0.25),
+    0 8px 32px alpha(@background, 0.5);
 }
 
 child:selected .item-box {
