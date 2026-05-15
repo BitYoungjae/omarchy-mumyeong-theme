@@ -30,6 +30,12 @@ theme[selected_fg]="#FFFFFF"
 # Color of inactive/disabled text
 theme[inactive_fg]="#52525B"
 
+# Color of text appearing on top of graphs (uptime, current network graph scaling)
+theme[graph_text]="#E4E4E7"
+
+# Background color of percentage meters
+theme[meter_bg]="#71717A"
+
 # Misc colors for processes box including mini cpu graphs, details memory graph and details status text
 theme[proc_misc]="#94A3B8"
 
@@ -81,3 +87,8 @@ theme[download_end]="#CBD5E1"
 theme[upload_start]="#D9A67E"
 theme[upload_mid]="#C4A6CF"
 theme[upload_end]="#E08A8A"
+
+# Process box gradient for threads/mem/cpu usage (Slate Blue -> Frost Linen -> Ghost Silver)
+theme[process_start]="#94A3B8"
+theme[process_mid]="#CBD5E1"
+theme[process_end]="#F4F4F5"
