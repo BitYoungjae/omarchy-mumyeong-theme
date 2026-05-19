@@ -161,7 +161,7 @@ Success: oma14 (#81C784) - 페일 에메랄드 (어두운 배경 가독성 최�
 | 파일명          | 수정 포인트                                                         |
 | --------------- | ------------------------------------------------------------------- |
 | `walker.css`    | `.item.active`의 `color`를 `#FFFFFF`로, `border`를 `#F4F4F5`로 설정 |
-| `hyprland.lua`  | `col.inactive_border`를 `rgb(71717A)`로 설정하여 윤곽선 확보        |
+| `hyprland.conf` | `col.inactive_border`를 `rgb(71717A)`로 설정하여 윤곽선 확보        |
 | `hyprlock.conf` | `$color` 0.6 알파로 배경 투명도, `$check_color`는 `$oma8`로 강조    |
 | `waybar.css`    | `background-color`를 `#09090b`로 변경하여 깊이감 추가               |
 
